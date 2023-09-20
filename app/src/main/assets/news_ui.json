@@ -1,0 +1,197 @@
+{
+  "templates": {
+    "title": {
+      "type": "text",
+      "font_size": 20,
+      "line_height": 16,
+      "font_weight": "bold",
+      "paddings": {
+        "left": 8,
+        "right": 8,
+        "bottom": 8
+      }
+    },
+    "subtitle": {
+      "font_size": 15,
+      "line_height": 20,
+      "type": "text",
+      "paddings": {
+        "left": 8,
+        "right": 8
+      }
+    },
+    "news_card": {
+      "type": "container",
+      "orientation": "vertical",
+      "border": {
+        "corner_radius": 8,
+        "stroke": {
+          "color": "#CCC"
+        }
+      },
+      "background": [
+        {
+          "type": "solid",
+          "color": "#FFF"
+        }
+      ],
+      "items": [
+        {
+          "type": "image",
+          "$image_url": "thumbnail",
+          "scale": "fill",
+          "width": {
+            "type": "match_parent"
+          },
+          "height": {
+            "type": "fixed",
+            "value": 160
+          }
+        },
+        {
+          "type": "text",
+          "$text": "title",
+          "font_size": 16,
+          "line_height": 20,
+          "font_weight": "medium",
+          "paddings": {
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
+          }
+        }
+      ]
+    }
+  },
+  "card": {
+    "log_id": "news_ui",
+    "states": [
+      {
+        "state_id": 0,
+        "div": {
+          "type": "container",
+          "orientation": "vertical",
+          "margins": {
+            "top": 16,
+            "bottom": 16
+          },
+          "items": [
+            {
+              "type": "title",
+              "text": "Berita Pilihan",
+              "margins": {
+                "left": 16,
+                "right": 16
+              }
+            },
+            {
+              "type": "subtitle",
+              "text": "Berikut adalah koleksi berita pilihan dari publikasi ilmiah terpilih.",
+              "margins": {
+                "bottom": 8,
+                "left": 16,
+                "right": 16
+              }
+            },
+            {
+              "type": "container",
+              "items": [
+                {
+                  "type": "indicator",
+                  "active_item_color": "#000000",
+                  "active_item_size": 1.5,
+                  "height": {
+                    "type": "fixed",
+                    "value": 10
+                  },
+                  "margins": {
+                    "top": 10,
+                    "bottom": 10
+                  },
+                  "space_between_centers": 10,
+                  "inactive_item_color": "#D0D1D9",
+                  "pager_id": "pager_with_indicator",
+                  "shape": {
+                    "type": "rounded_rectangle",
+                    "corner_radius": {
+                      "type": "fixed",
+                      "value": 2
+                    },
+                    "item_height": {
+                      "type": "fixed",
+                      "value": 2
+                    },
+                    "item_width": {
+                      "type": "fixed",
+                      "value": 10
+                    }
+                  }
+                },
+                {
+                  "type": "pager",
+                  "id": "pager_with_indicator",
+                  "item_spacing": {
+                    "type": "fixed",
+                    "value": 8
+                  },
+                  "height": {
+                    "type": "wrap_content"
+                  },
+                  "layout_mode": {
+                    "type": "fixed",
+                    "neighbour_page_width": {
+                      "type": "fixed",
+                      "value": 16
+                    }
+                  },
+                  "paddings": {
+                    "left": 16,
+                    "right": 16
+                  },
+                  "items": [
+                    {
+                      "type": "news_card",
+                      "thumbnail": "https://cdn.shortpixel.ai/spai/q_lossy+w_1043+h_587+to_auto+ret_img/cosmosmagazine.com/wp-content/uploads/2023/08/Tetraquark_LHCb_2019_large-00050-3.jpg",
+                      "title": "First glimpse of tetraquark pair at Large Hadron Collider"
+                    },
+                    {
+                      "type": "news_card",
+                      "thumbnail": "https://cdn.shortpixel.ai/spai/q_lossy+w_1043+h_587+to_auto+ret_img/cosmosmagazine.com/wp-content/uploads/2023/04/JWST-NGC-346-cropped.jpg",
+                      "title": "‘Dark photons’ could be the key to understanding dark matter"
+                    },
+                    {
+                      "type": "news_card",
+                      "thumbnail": "https://media.nature.com/lw767/magazine-assets/d41586-023-02943-5/d41586-023-02943-5_26058934.jpg?as=webp",
+                      "title": "AlphaFold tool pinpoints protein mutations that cause disease"
+                    },
+                    {
+                      "type": "news_card",
+                      "thumbnail": "https://www.sciencenews.org/wp-content/uploads/2023/09/091923_kk_thylacine_feat-1380x776.jpg",
+                      "title": "Researchers decoded the RNA of an extinct animal"
+                    },
+                    {
+                      "type": "news_card",
+                      "thumbnail": "https://images.newscientist.com/wp-content/uploads/2023/09/19160314/SEI_172296115.jpg?width=900",
+                      "title": "Theory of consciousness branded 'pseudoscience' by neuroscientists"
+                    },
+                    {
+                      "type": "news_card",
+                      "thumbnail": "https://scitechdaily.com/images/Clostridioides-difficile-Bacteria-Illustration-777x437.jpg?ezimgfmt=ngcb2/notWebP",
+                      "title": "The Surprising Origin of a Deadly Hospital Infection"
+                    },
+                    {
+                      "type": "news_card",
+                      "thumbnail": "https://scx1.b-cdn.net/csz/news/800a/2023/yogurt-may-be-the-next-1.jpg",
+                      "title": "Yogurt may be the next go-to garlic breath remedy"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -88,4 +88,13 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer-core:2.18.1'
     implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.1'
 
+    // SDUI
+    def divkit_version = "3.0.1"
+    implementation "com.yandex.div:div-core:$divkit_version"
+    implementation "com.yandex.div:div:$divkit_version"
+    implementation "com.yandex.div:div-json:$divkit_version"
+
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+
 }
